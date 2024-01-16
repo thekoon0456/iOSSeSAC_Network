@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7C4EDA1F2B56650F0048BE35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EDA1E2B56650F0048BE35 /* AppDelegate.swift */; };
+		7C4EDA212B56650F0048BE35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EDA202B56650F0048BE35 /* SceneDelegate.swift */; };
+		7C4EDA232B56650F0048BE35 /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EDA222B56650F0048BE35 /* LottoViewController.swift */; };
+		7C4EDA262B56650F0048BE35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4EDA242B56650F0048BE35 /* Main.storyboard */; };
+		7C4EDA282B5665110048BE35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C4EDA272B5665110048BE35 /* Assets.xcassets */; };
+		7C4EDA2B2B5665110048BE35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4EDA292B5665110048BE35 /* LaunchScreen.storyboard */; };
+		7C4EDA332B5667AE0048BE35 /* LottoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EDA322B5667AE0048BE35 /* LottoModel.swift */; };
+		7C4EDA352B5667E70048BE35 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EDA342B5667E70048BE35 /* Protocol.swift */; };
+		7C4EDA372B56684A0048BE35 /* LottoAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EDA362B56684A0048BE35 /* LottoAPIService.swift */; };
+		7C4EDA3A2B56686B0048BE35 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7C4EDA392B56686B0048BE35 /* Alamofire */; };
+		7C4EDA412B5668C30048BE35 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EDA402B5668C30048BE35 /* Array+.swift */; };
+		7C4EDA432B5668D00048BE35 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EDA422B5668D00048BE35 /* UIView+.swift */; };
+		7C4EDA452B5668E40048BE35 /* UIVIewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EDA442B5668E40048BE35 /* UIVIewController+.swift */; };
+		7C4EDA472B566D5F0048BE35 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EDA462B566D5F0048BE35 /* UIColor+.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7C4EDA1B2B56650F0048BE35 /* SeSAC_Network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC_Network.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C4EDA1E2B56650F0048BE35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7C4EDA202B56650F0048BE35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7C4EDA222B56650F0048BE35 /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
+		7C4EDA252B56650F0048BE35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7C4EDA272B5665110048BE35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7C4EDA2A2B5665110048BE35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7C4EDA2C2B5665110048BE35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C4EDA322B5667AE0048BE35 /* LottoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoModel.swift; sourceTree = "<group>"; };
+		7C4EDA342B5667E70048BE35 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		7C4EDA362B56684A0048BE35 /* LottoAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoAPIService.swift; sourceTree = "<group>"; };
+		7C4EDA402B5668C30048BE35 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
+		7C4EDA422B5668D00048BE35 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		7C4EDA442B5668E40048BE35 /* UIVIewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController+.swift"; sourceTree = "<group>"; };
+		7C4EDA462B566D5F0048BE35 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7C4EDA182B56650F0048BE35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C4EDA3A2B56686B0048BE35 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7C4EDA122B56650F0048BE35 = {
+			isa = PBXGroup;
+			children = (
+				7C4EDA1D2B56650F0048BE35 /* SeSAC_Network */,
+				7C4EDA1C2B56650F0048BE35 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7C4EDA1C2B56650F0048BE35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7C4EDA1B2B56650F0048BE35 /* SeSAC_Network.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7C4EDA1D2B56650F0048BE35 /* SeSAC_Network */ = {
+			isa = PBXGroup;
+			children = (
+				7C4EDA3F2B5668B30048BE35 /* Extension */,
+				7C4EDA3B2B56686F0048BE35 /* Protocol */,
+				7C4EDA3C2B56687B0048BE35 /* LottoPart */,
+				7C4EDA1E2B56650F0048BE35 /* AppDelegate.swift */,
+				7C4EDA202B56650F0048BE35 /* SceneDelegate.swift */,
+				7C4EDA242B56650F0048BE35 /* Main.storyboard */,
+				7C4EDA272B5665110048BE35 /* Assets.xcassets */,
+				7C4EDA292B5665110048BE35 /* LaunchScreen.storyboard */,
+				7C4EDA2C2B5665110048BE35 /* Info.plist */,
+			);
+			path = SeSAC_Network;
+			sourceTree = "<group>";
+		};
+		7C4EDA3B2B56686F0048BE35 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				7C4EDA342B5667E70048BE35 /* Protocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		7C4EDA3C2B56687B0048BE35 /* LottoPart */ = {
+			isa = PBXGroup;
+			children = (
+				7C4EDA3D2B5668920048BE35 /* Model */,
+				7C4EDA3E2B56689D0048BE35 /* Service */,
+				7C4EDA222B56650F0048BE35 /* LottoViewController.swift */,
+			);
+			name = LottoPart;
+			sourceTree = "<group>";
+		};
+		7C4EDA3D2B5668920048BE35 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7C4EDA322B5667AE0048BE35 /* LottoModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7C4EDA3E2B56689D0048BE35 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7C4EDA362B56684A0048BE35 /* LottoAPIService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		7C4EDA3F2B5668B30048BE35 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7C4EDA402B5668C30048BE35 /* Array+.swift */,
+				7C4EDA422B5668D00048BE35 /* UIView+.swift */,
+				7C4EDA442B5668E40048BE35 /* UIVIewController+.swift */,
+				7C4EDA462B566D5F0048BE35 /* UIColor+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7C4EDA1A2B56650F0048BE35 /* SeSAC_Network */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C4EDA2F2B5665110048BE35 /* Build configuration list for PBXNativeTarget "SeSAC_Network" */;
+			buildPhases = (
+				7C4EDA172B56650F0048BE35 /* Sources */,
+				7C4EDA182B56650F0048BE35 /* Frameworks */,
+				7C4EDA192B56650F0048BE35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SeSAC_Network;
+			packageProductDependencies = (
+				7C4EDA392B56686B0048BE35 /* Alamofire */,
+			);
+			productName = SeSAC_Network;
+			productReference = 7C4EDA1B2B56650F0048BE35 /* SeSAC_Network.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7C4EDA132B56650F0048BE35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					7C4EDA1A2B56650F0048BE35 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 7C4EDA162B56650F0048BE35 /* Build configuration list for PBXProject "SeSAC_Network" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7C4EDA122B56650F0048BE35;
+			packageReferences = (
+				7C4EDA382B56686B0048BE35 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = 7C4EDA1C2B56650F0048BE35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7C4EDA1A2B56650F0048BE35 /* SeSAC_Network */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7C4EDA192B56650F0048BE35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C4EDA2B2B5665110048BE35 /* LaunchScreen.storyboard in Resources */,
+				7C4EDA282B5665110048BE35 /* Assets.xcassets in Resources */,
+				7C4EDA262B56650F0048BE35 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7C4EDA172B56650F0048BE35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C4EDA232B56650F0048BE35 /* LottoViewController.swift in Sources */,
+				7C4EDA1F2B56650F0048BE35 /* AppDelegate.swift in Sources */,
+				7C4EDA332B5667AE0048BE35 /* LottoModel.swift in Sources */,
+				7C4EDA372B56684A0048BE35 /* LottoAPIService.swift in Sources */,
+				7C4EDA432B5668D00048BE35 /* UIView+.swift in Sources */,
+				7C4EDA212B56650F0048BE35 /* SceneDelegate.swift in Sources */,
+				7C4EDA352B5667E70048BE35 /* Protocol.swift in Sources */,
+				7C4EDA452B5668E40048BE35 /* UIVIewController+.swift in Sources */,
+				7C4EDA412B5668C30048BE35 /* Array+.swift in Sources */,
+				7C4EDA472B566D5F0048BE35 /* UIColor+.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7C4EDA242B56650F0048BE35 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C4EDA252B56650F0048BE35 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7C4EDA292B5665110048BE35 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C4EDA2A2B5665110048BE35 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7C4EDA2D2B5665110048BE35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7C4EDA2E2B5665110048BE35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7C4EDA302B5665110048BE35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W6X76DS4Z7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SeSAC_Network/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thekoon.SeSAC-Network";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7C4EDA312B5665110048BE35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W6X76DS4Z7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SeSAC_Network/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thekoon.SeSAC-Network";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7C4EDA162B56650F0048BE35 /* Build configuration list for PBXProject "SeSAC_Network" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C4EDA2D2B5665110048BE35 /* Debug */,
+				7C4EDA2E2B5665110048BE35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C4EDA2F2B5665110048BE35 /* Build configuration list for PBXNativeTarget "SeSAC_Network" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C4EDA302B5665110048BE35 /* Debug */,
+				7C4EDA312B5665110048BE35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7C4EDA382B56686B0048BE35 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7C4EDA392B56686B0048BE35 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C4EDA382B56686B0048BE35 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 7C4EDA132B56650F0048BE35 /* Project object */;
+}
