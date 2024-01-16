@@ -11,6 +11,9 @@ final class LottoViewController: UIViewController {
     
     @IBOutlet var lottoTitleLable: UILabel!
     @IBOutlet var numberTextfield: UITextField!
+    
+    @IBOutlet var drawLabel: UILabel!
+    
     @IBOutlet var resultStackView: UIStackView!
     @IBOutlet var bonusLabel: UILabel!
     
@@ -36,7 +39,7 @@ extension LottoViewController {
             DispatchQueue.main.async { [weak self] in
                 guard let self else { return }
                 //TextField 글 설정
-                numberTextfield.text = "선택한 회차는 \(lotto.drwNo)회 입니다."
+                drawLabel.text = "선택한 회차는 \(lotto.drwNo)회 입니다."
                 
                 //하나씩 돌면서 이미지 추가
                 lotto.resultArr.forEach { [weak self] num in
@@ -65,6 +68,11 @@ extension LottoViewController: SetUI {
         lottoTitleLable.textAlignment = .center
         bonusLabel.text = LottoConst.bonus.rawValue
         bonusLabel.font = .systemFont(ofSize: 12)
+        
+        drawLabel.font = .systemFont(ofSize: 20)
+        drawLabel.textColor = .randomColor
+        
+        numberTextfield.text = LottoConst.numberTextFieldTitle.rawValue
         
         resultStackView.spacing = 10
         resultStackView.alignment = .center
@@ -102,8 +110,10 @@ extension LottoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         //기존 스택뷰 삭제
         resultStackView.subviews.forEach { $0.removeFromSuperview() }
-        numberTextfield.text = "선택한 회차는 \(episodeNumber[row])회 입니다."
+        drawLabel.text = "선택한 회차는 \(episodeNumber[row])회 입니다."
         getResult(number: episodeNumber[row])
+        
+        view.endEditing(true)
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

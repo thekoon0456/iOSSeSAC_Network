@@ -8,9 +8,21 @@
 import UIKit
 
 enum BeerConst {
-    enum URL: String {
-        case beerURL = "https://api.punkapi.com/v2/beers/random"
-        case defaultImageURL = "https://images.punkapi.com/v2/keg.png"
+    enum URL {
+        case beerRandomURL
+        case beerListURL
+        case defaultImageURL
+        
+        var value: String {
+            switch self {
+            case .beerRandomURL:
+                "https://api.punkapi.com/v2/beers/random"
+            case .beerListURL:
+                "https://api.punkapi.com/v2/beers"
+            case .defaultImageURL:
+                "https://images.punkapi.com/v2/keg.png"
+            }
+        }
     }
     
     enum Title {

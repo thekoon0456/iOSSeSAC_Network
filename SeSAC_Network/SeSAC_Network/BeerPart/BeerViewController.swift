@@ -17,19 +17,26 @@ final class BeerViewController: UIViewController {
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var recommendButton: UIButton!
     
-    let placeHolderImage = BeerConst.Image.lodingImage
-    
     let service = BeerAPIService()
+    let placeHolderImage = BeerConst.Image.lodingImage
+    let url = BeerConst.URL.beerRandomURL.value
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureUI()
+        configureImageTap()
         getBeer()
     }
     
     @IBAction func recommendButtonTapped(_ sender: UIButton) {
         getBeer()
+    }
+    
+    @objc func imageTapped() {
+        print("눌림")
+        guard let vc = storyboard?.instantiateViewController(identifier: BeerListViewController.identifier) as? BeerListViewController else { return }
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -37,19 +44,26 @@ final class BeerViewController: UIViewController {
 
 extension BeerViewController {
     func getBeer() {
-        service.requestBeerAPI { beers in
+        service.requestBeerAPI(url: url) { beers in
             dump(beers)
             DispatchQueue.main.async { [weak self] in
                 guard
                     let self,
                     let beer = beers.first
                 else { return }
-                beerImage.kf.setImage(with: URL(string: beer.imageURL ?? BeerConst.URL.defaultImageURL.rawValue),
+                beerImage.kf.setImage(with: URL(string: beer.imageURL ?? BeerConst.URL.defaultImageURL.value),
                                       placeholder: placeHolderImage)
                 beerNameLabel.text = beer.name
                 descriptionLabel.text = beer.description
             }
         }
+    }
+    
+    func configureImageTap() {
+        beerImage.isUserInteractionEnabled = true
+        let gesture = UITapGestureRecognizer(target: self,
+                                          action: #selector(imageTapped))
+        beerImage.addGestureRecognizer(gesture)
     }
 }
 

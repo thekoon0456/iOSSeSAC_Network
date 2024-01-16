@@ -10,9 +10,8 @@ import Foundation
 import Alamofire
 
 final class BeerAPIService {
-    let url = BeerConst.URL.beerURL.rawValue
     
-    func requestBeerAPI(completion: @escaping ([Beer]) -> Void) {
+    func requestBeerAPI(url: String, completion: @escaping ([Beer]) -> Void) {
         AF.request(url)
             .responseDecodable(of: [Beer].self) { response in
                 switch response.result {

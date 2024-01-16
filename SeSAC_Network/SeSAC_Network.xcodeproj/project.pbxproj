@@ -27,6 +27,9 @@
 		7C4EDA552B5679A60048BE35 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7C4EDA542B5679A60048BE35 /* Kingfisher */; };
 		7CB80D8D2B56817D006229BC /* BeerConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB80D8C2B56817D006229BC /* BeerConst.swift */; };
 		7CB80D8F2B56826D006229BC /* LottoConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB80D8E2B56826D006229BC /* LottoConst.swift */; };
+		7CB80D932B568442006229BC /* BeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB80D912B568442006229BC /* BeerCollectionViewCell.swift */; };
+		7CB80D942B568442006229BC /* BeerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CB80D922B568442006229BC /* BeerCollectionViewCell.xib */; };
+		7CB80D962B568463006229BC /* BeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB80D952B568463006229BC /* BeerListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		7C4EDA4F2B5677D90048BE35 /* BeerAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerAPIService.swift; sourceTree = "<group>"; };
 		7CB80D8C2B56817D006229BC /* BeerConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerConst.swift; sourceTree = "<group>"; };
 		7CB80D8E2B56826D006229BC /* LottoConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoConst.swift; sourceTree = "<group>"; };
+		7CB80D912B568442006229BC /* BeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewCell.swift; sourceTree = "<group>"; };
+		7CB80D922B568442006229BC /* BeerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCollectionViewCell.xib; sourceTree = "<group>"; };
+		7CB80D952B568463006229BC /* BeerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,7 @@
 				7C4EDA3B2B56686F0048BE35 /* Protocol */,
 				7C4EDA3C2B56687B0048BE35 /* LottoPart */,
 				7C4EDA4A2B5676150048BE35 /* BeerPart */,
+				7CB80D8C2B56817D006229BC /* BeerConst.swift */,
 				7C4EDA1E2B56650F0048BE35 /* AppDelegate.swift */,
 				7C4EDA202B56650F0048BE35 /* SceneDelegate.swift */,
 				7C4EDA242B56650F0048BE35 /* Main.storyboard */,
@@ -150,7 +157,8 @@
 				7C4EDA512B5679030048BE35 /* Model */,
 				7C4EDA522B56790A0048BE35 /* Service */,
 				7C4EDA4B2B5676360048BE35 /* BeerViewController.swift */,
-				7CB80D8C2B56817D006229BC /* BeerConst.swift */,
+				7CB80D952B568463006229BC /* BeerListViewController.swift */,
+				7CB80D902B568428006229BC /* BeerCell */,
 			);
 			path = BeerPart;
 			sourceTree = "<group>";
@@ -169,6 +177,15 @@
 				7C4EDA4F2B5677D90048BE35 /* BeerAPIService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		7CB80D902B568428006229BC /* BeerCell */ = {
+			isa = PBXGroup;
+			children = (
+				7CB80D912B568442006229BC /* BeerCollectionViewCell.swift */,
+				7CB80D922B568442006229BC /* BeerCollectionViewCell.xib */,
+			);
+			path = BeerCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CB80D942B568442006229BC /* BeerCollectionViewCell.xib in Resources */,
 				7C4EDA2B2B5665110048BE35 /* LaunchScreen.storyboard in Resources */,
 				7C4EDA282B5665110048BE35 /* Assets.xcassets in Resources */,
 				7C4EDA262B56650F0048BE35 /* Main.storyboard in Resources */,
@@ -259,9 +277,11 @@
 				7C4EDA212B56650F0048BE35 /* SceneDelegate.swift in Sources */,
 				7C4EDA502B5677D90048BE35 /* BeerAPIService.swift in Sources */,
 				7C4EDA4E2B5677790048BE35 /* Beer.swift in Sources */,
+				7CB80D962B568463006229BC /* BeerListViewController.swift in Sources */,
 				7C4EDA352B5667E70048BE35 /* Protocol.swift in Sources */,
 				7C4EDA452B5668E40048BE35 /* UIVIewController+.swift in Sources */,
 				7CB80D8F2B56826D006229BC /* LottoConst.swift in Sources */,
+				7CB80D932B568442006229BC /* BeerCollectionViewCell.swift in Sources */,
 				7C4EDA412B5668C30048BE35 /* Array+.swift in Sources */,
 				7C4EDA472B566D5F0048BE35 /* UIColor+.swift in Sources */,
 				7CB80D8D2B56817D006229BC /* BeerConst.swift in Sources */,
