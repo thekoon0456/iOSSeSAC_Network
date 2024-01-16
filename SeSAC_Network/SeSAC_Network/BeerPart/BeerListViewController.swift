@@ -12,6 +12,7 @@ final class BeerListViewController: UIViewController {
     @IBOutlet var beerCollectionView: UICollectionView!
     
     let service = BeerAPIService()
+    
     var beerData: [Beer] = [] {
         didSet {
             beerCollectionView.reloadData()
@@ -20,7 +21,7 @@ final class BeerListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configureUI()
         configureCollectionView()
         getBeer(url: BeerConst.URL.beerListURL.value)
@@ -41,7 +42,7 @@ extension BeerListViewController {
 
 extension BeerListViewController: SetUI {
     func configureUI() {
-        navigationItem.title = "맥주 보기"
+        navigationItem.title = BeerConst.Title.naviTitle.value
     }
     
     func configureCollectionView() {
@@ -80,5 +81,20 @@ extension BeerListViewController: UICollectionViewDelegate, UICollectionViewData
         
         cell.configureCellData(beerData[indexPath.item])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: BeerViewController.identifier) as? BeerViewController
+        else { return }
+        
+        vc.navigationItem.rightBarButtonItem = UIBarButtonItem(systemItem: .close, primaryAction: UIAction { action in
+            self.dismiss(animated: true)
+        })
+        
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .fullScreen
+        nav.modalTransitionStyle = .crossDissolve
+        
+        present(nav, animated: true)
     }
 }

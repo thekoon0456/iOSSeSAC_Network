@@ -11,23 +11,22 @@ final class LottoViewController: UIViewController {
     
     @IBOutlet var lottoTitleLable: UILabel!
     @IBOutlet var numberTextfield: UITextField!
-    
     @IBOutlet var drawLabel: UILabel!
-    
     @IBOutlet var resultStackView: UIStackView!
     @IBOutlet var bonusLabel: UILabel!
     
     let service = LottoAPIService()
-    let resultNumber = 1102
+    
+    let latestNumber = 1102
     //picker
     let pickerView = UIPickerView()
-    lazy var episodeNumber: [Int] = (1...resultNumber).reversed()
+    lazy var episodeNumber: [Int] = (1...latestNumber).reversed()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureUI()
-        getResult(number: resultNumber)
+        getResult(number: latestNumber)
     }
 }
 
@@ -44,7 +43,7 @@ extension LottoViewController {
                 //하나씩 돌면서 이미지 추가
                 lotto.resultArr.forEach { [weak self] num in
                     guard let self else { return }
-                    let image = UIImage(systemName: "\(num).circle")?.withTintColor(.randomColor, renderingMode: .alwaysOriginal)
+                    let image = UIImage(systemName: "\(num).circle.fill")?.withTintColor(.randomColor, renderingMode: .alwaysOriginal)
                     let imageView = UIImageView(image: image)
                     imageView.contentMode = .scaleAspectFill
                     
@@ -62,15 +61,16 @@ extension LottoViewController: SetUI {
     func configureUI() {
         configureTextField()
         configurePicker()
+        configureTabBar()
         
-        lottoTitleLable.text = LottoConst.title.rawValue
-        lottoTitleLable.font = .systemFont(ofSize: 30)
-        lottoTitleLable.textAlignment = .center
-        bonusLabel.text = LottoConst.bonus.rawValue
-        bonusLabel.font = .systemFont(ofSize: 12)
-        
-        drawLabel.font = .systemFont(ofSize: 20)
-        drawLabel.textColor = .randomColor
+        setLabel(lottoTitleLable,
+                 text: LottoConst.title.rawValue,
+                 font: .systemFont(ofSize: 30),
+                 alignment: .center)
+        setLabel(bonusLabel,
+                 text: LottoConst.bonus.rawValue)
+        setLabel(drawLabel,
+                 font: .systemFont(ofSize: 20))
         
         numberTextfield.text = LottoConst.numberTextFieldTitle.rawValue
         
@@ -78,6 +78,10 @@ extension LottoViewController: SetUI {
         resultStackView.alignment = .center
         resultStackView.axis = .horizontal
         resultStackView.distribution = .fillEqually
+    }
+    
+    func configureTabBar() {
+        tabBarController?.tabBar.tintColor = .beerOrange
     }
     
     func configureTextField() {

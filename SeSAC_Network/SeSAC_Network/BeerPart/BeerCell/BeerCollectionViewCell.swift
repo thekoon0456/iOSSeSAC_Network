@@ -25,14 +25,17 @@ class BeerCollectionViewCell: UICollectionViewCell {
 extension BeerCollectionViewCell: SetCell {
     
     typealias T = Beer
-
+    
     func configureUI() {
         beerImage.contentMode = .scaleAspectFit
-        beerTitle.font = .boldSystemFont(ofSize: 15)
-        beerTitle.textAlignment = .left
-        beerDescription.font = .systemFont(ofSize: 12)
-        beerDescription.textAlignment = .left
-        beerDescription.numberOfLines = 0
+        
+        setLabel(beerTitle,
+                 font: .boldSystemFont(ofSize: 15),
+                 alignment: .left)
+        setLabel(beerDescription,
+                 font: .systemFont(ofSize: 12),
+                 lines: 0,
+                 alignment: .left)
     }
     
     func configureCellData(_ data: Beer) {

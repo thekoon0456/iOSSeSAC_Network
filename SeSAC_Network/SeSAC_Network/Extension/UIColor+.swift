@@ -8,6 +8,7 @@
 import UIKit
 
 extension UIColor {
+    //오렌지 버튼 컬러
     static let beerOrangeColor = UIColor(named: "BeerOrangeColor")!
     
     static var randomColor: UIColor {

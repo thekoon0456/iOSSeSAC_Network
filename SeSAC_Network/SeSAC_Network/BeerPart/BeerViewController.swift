@@ -12,6 +12,7 @@ import Kingfisher
 final class BeerViewController: UIViewController {
     
     @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var noticeLabel: UILabel!
     @IBOutlet var beerImage: UIImageView!
     @IBOutlet var beerNameLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
@@ -23,7 +24,7 @@ final class BeerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configureUI()
         configureImageTap()
         getBeer()
@@ -34,7 +35,6 @@ final class BeerViewController: UIViewController {
     }
     
     @objc func imageTapped() {
-        print("눌림")
         guard let vc = storyboard?.instantiateViewController(identifier: BeerListViewController.identifier) as? BeerListViewController else { return }
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -62,7 +62,7 @@ extension BeerViewController {
     func configureImageTap() {
         beerImage.isUserInteractionEnabled = true
         let gesture = UITapGestureRecognizer(target: self,
-                                          action: #selector(imageTapped))
+                                             action: #selector(imageTapped))
         beerImage.addGestureRecognizer(gesture)
     }
 }
@@ -72,17 +72,23 @@ extension BeerViewController {
 extension BeerViewController: SetUI {
     
     func configureUI() {
-        titleLabel.text = BeerConst.Title.title.value
-        titleLabel.font = .boldSystemFont(ofSize: 25)
-        titleLabel.textAlignment = .center
+        navigationItem.title = BeerConst.Title.naviTitle.value
+        setLabel(titleLabel,
+                 text: BeerConst.Title.title.value,
+                 font: .boldSystemFont(ofSize: 25),
+                 alignment: .center)
+        setLabel(noticeLabel,
+                 text: BeerConst.Title.noticeTitle.value,
+                 font: .systemFont(ofSize: 15),
+                 alignment: .center)
+        setLabel(beerNameLabel,
+                 font: .boldSystemFont(ofSize: 20),
+                 alignment: .center)
+        setLabel(descriptionLabel,
+                 lines: 0,
+                 alignment: .center)
         
         beerImage.contentMode = .scaleAspectFit
-        
-        beerNameLabel.font = .boldSystemFont(ofSize: 20)
-        beerNameLabel.textAlignment = .center
-        descriptionLabel.textAlignment = .center
-        descriptionLabel.numberOfLines = 0
-        
         recommendButton.setImage(BeerConst.Image.buttonImage, for: .normal)
         recommendButton.setTitle(BeerConst.Title.buttonTitle.value, for: .normal)
         recommendButton.setTitleColor(.beerOrangeColor, for: .normal)

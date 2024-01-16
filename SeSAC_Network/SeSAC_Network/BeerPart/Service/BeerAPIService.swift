@@ -18,7 +18,7 @@ final class BeerAPIService {
                 case .success(let success):
                     completion(success)
                 case .failure(let failure):
-                    print("\(failure)")
+                    print("\(failure.localizedDescription)")
                 }
             }
     }

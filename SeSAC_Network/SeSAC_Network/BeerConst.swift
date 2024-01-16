@@ -24,15 +24,21 @@ enum BeerConst {
             }
         }
     }
-    
+
     enum Title {
+        case naviTitle
         case title
+        case noticeTitle
         case buttonTitle
         
         var value: String {
             switch self {
+            case .naviTitle:
+                "추천 맥주"
             case .title:
                 "오늘은 이 맥주를 추천합니다!"
+            case .noticeTitle:
+                "사진을 누르시면 다양한 맥주를 보실 수 있어요"
             case .buttonTitle:
                 "다른 맥주 추천받기"
             }
