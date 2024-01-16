@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LottoViewController: UIViewController {
+final class LottoViewController: UIViewController {
     
     @IBOutlet var lottoTitleLable: UILabel!
     @IBOutlet var numberTextfield: UITextField!
@@ -24,15 +24,15 @@ class LottoViewController: UIViewController {
         super.viewDidLoad()
         
         configureUI()
-        getResult(number: "\(resultNumber)")
+        getResult(number: resultNumber)
     }
 }
 
 // MARK: - Helpers
 
 extension LottoViewController {
-    func getResult(number: String) {
-        service.callRequest(number: "\(number)") { lotto in
+    func getResult(number: Int) {
+        service.callRequest(number: String(number)) { lotto in
             DispatchQueue.main.async { [weak self] in
                 guard let self else { return }
                 //TextField 글 설정
@@ -60,10 +60,10 @@ extension LottoViewController: SetUI {
         configureTextField()
         configurePicker()
         
-        lottoTitleLable.text = "Lottery"
+        lottoTitleLable.text = LottoConst.title.rawValue
         lottoTitleLable.font = .systemFont(ofSize: 30)
         lottoTitleLable.textAlignment = .center
-        bonusLabel.text = "Bonus!"
+        bonusLabel.text = LottoConst.bonus.rawValue
         bonusLabel.font = .systemFont(ofSize: 12)
         
         resultStackView.spacing = 10
@@ -103,10 +103,11 @@ extension LottoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         //기존 스택뷰 삭제
         resultStackView.subviews.forEach { $0.removeFromSuperview() }
         numberTextfield.text = "선택한 회차는 \(episodeNumber[row])회 입니다."
-        getResult(number: "\(episodeNumber[row])")
+        getResult(number: episodeNumber[row])
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         "\(episodeNumber[row])회"
     }
 }
+

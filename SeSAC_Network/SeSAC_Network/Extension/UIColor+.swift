@@ -8,6 +8,8 @@
 import UIKit
 
 extension UIColor {
+    static let beerOrangeColor = UIColor(named: "BeerOrangeColor")!
+    
     static var randomColor: UIColor {
         let randomInt = CGFloat.random(in: 0...1)
         let randomInt2 = CGFloat.random(in: 0...1)

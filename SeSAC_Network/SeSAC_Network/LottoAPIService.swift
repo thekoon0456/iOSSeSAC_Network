@@ -13,7 +13,7 @@ final class LottoAPIService {
     
     func callRequest(number: String,
                      completionHandler: @escaping (Lotto) -> Void) { //매개변수로 회차 전달
-        let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(number)"
+        let url = LottoConst.requestURL.rawValue + String(number)
         
         AF.request(url)
             .responseDecodable(of: Lotto.self) { response in
